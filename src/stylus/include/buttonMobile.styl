@@ -1,0 +1,88 @@
+// Указание задержки и продолжительности анимации
+rotate-direction = 300ms // задержка фазы поворота
+step-direction = 300ms // задержка фазы смещения плиток
+color-button = #000 // цвет плиток
+radius-button = 20% // скругление углов плиток
+bezier = cubic-bezier(.59,.07,.57,.68) // функция анимации cubic-bezier(.52,.06,.49,.92)
+width-button = 25px // ширина
+height-button = 15 // общая высота кнопки
+height-pill = height-button/5 // высота плиток
+
+#nav-button 
+  position relative
+  display inline-block
+  width width-button
+  height (height-button)px
+  cursor pointer
+  @media tab
+    display none
+
+#nav-button span 
+  position absolute
+  left 0
+  top (height-pill*2)px
+  transition all step-direction bezier
+  
+// Базовые размеры плиток
+#nav-button span 
+#nav-button span:before
+#nav-button span:after
+  position absolute
+  display block
+  content ''
+  height (height-pill)px
+  width width-button
+  border-radius radius-button
+  background color-button
+
+#nav-button span:before 
+  top -(height-pill*2)px
+
+#nav-button span:after 
+  bottom -(height-pill*2)px 
+
+/* Центральную плитку делаем прозрачным */
+#nav-button.active span 
+  background-color transparent
+
+/* Анимация плиток */
+#nav-button.active span:before
+  animation pile-step1-before step-direction bezier, pile-rotate-before rotate-direction bezier step-direction
+  animation-fill-mode both
+#nav-button.deactive span:before
+  transform rotate(45deg)
+  top 0
+  animation pile-not-rotate rotate-direction bezier, pile-step2-before step-direction bezier rotate-direction
+  animation-fill-mode both
+  
+#nav-button.active span:after
+  animation pile-step1-after step-direction bezier, pile-rotate-after rotate-direction bezier step-direction
+  animation-fill-mode both
+#nav-button.deactive span:after
+  transform rotate(-45deg)
+  bottom 0
+  animation pile-not-rotate rotate-direction bezier, pile-step2-after step-direction bezier rotate-direction
+  animation-fill-mode both
+
+@keyframes pile-step1-before
+  100%
+    top 0
+@keyframes pile-step2-before
+  100%
+    top -(height-pill*2)px
+@keyframes pile-step1-after
+  100%
+    bottom 0
+@keyframes pile-step2-after
+  100%
+    bottom -(height-pill*2)px
+@keyframes pile-rotate-before
+  100%
+    transform rotate(45deg)
+@keyframes pile-rotate-after
+  100%
+    transform rotate(-45deg)
+@keyframes pile-not-rotate
+  100%
+    transform rotate(0deg)
+    
