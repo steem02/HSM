@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <title>HSM Wallet</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/><link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/build.css"/>
   </head>
   <body>
@@ -14,15 +14,39 @@
       <section class="main">
         <aside>
           <ul class="list">
-            <li class="list__item"> <a class="list__link list__link_balance" href="#">Balance</a></li>
-            <li class="list__item"> <a class="list__link list__link_history" href="#">History</a></li>
-            <li class="list__item"> <a class="list__link list__link_send" href="#">Send</a></li>
-            <li class="list__item"> <a class="list__link list__link_newaddress" href="#">New Address</a></li>
-            <li class="list__item"> <a class="list__link list__link_setting" href="#">Setting</a></li>
-            <li class="list__item"> <a class="list__link list__link_logout" href="#">Log out</a></li>
+            <li class="list__item"> <a class="icon list__link active list__link_balance" href="#">Balance</a></li>
+            <li class="list__item"> <a class="icon list__link list__link_history" href="#">History</a></li>
+            <li class="list__item"> <a class="icon list__link list__link_send" href="#">Send</a></li>
+            <li class="list__item"> <a class="icon list__link list__link_newaddress" href="#">New Address</a></li>
+            <li class="list__item"> <a class="icon list__link list__link_setting" href="#">Settings</a></li>
+            <li class="list__item"> <a class="icon list__link list__link_logout" href="#">Log out</a></li>
           </ul>
         </aside>
-        <div class="content"></div>
+        <div class="content contaner">
+          <div class="balance">
+            <h2 class="title-content">Your current account state:</h2>
+            <table class="table balance__table">
+              <tbody>
+                <tr>
+                  <td class="icon balance__icon balance__icon_bitcoin">Bitcoin</td>
+                  <td>4.185 <span class="balance__money">ВТС</span></td>
+                </tr>
+                <tr>
+                  <td class="icon balance__icon balance__icon_testnet">Bitcoin Testnet</td>
+                  <td>1.004 <span class="balance__money">ВТС</span></td>
+                </tr>
+                <tr>
+                  <td class="icon balance__icon balance__icon_ethereum">Ethereum</td>
+                  <td>23.487 <span class="balance__money">ETH</span></td>
+                </tr>
+                <tr>
+                  <td class="icon balance__icon balance__icon_rinkeby">Ethereum Rinkeby</td>
+                  <td>0.245 <span class="balance__money">ETH</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
     </main>
     <script src="js/build.js"></script>

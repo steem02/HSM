@@ -4,11 +4,13 @@ html(lang="en")
 		meta(charset="UTF-8")
 		title HSM Wallet
 		meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 		link(rel="stylesheet", href="css/build.css")
 	body
 		main
 			include include/header.pug
 			section.main
 				include include/aside.pug
-				.content
+				.content.contaner
+					include include/balance.pug
 		script(src="js/build.js")

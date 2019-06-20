@@ -1,0 +1,11 @@
+.form
+	h2.title-content Please log in to your Wallet
+	form(action="", method="", name="login")
+		.label
+			input.form__input(type="email" name="email" placeholder="E-Mail")
+		.label
+			input.form__input(type="password" name="password" placeholder="Password")
+		div
+			input.login__submit.form__submit(type="submit", value="Login")
+	p.login__link
+		a(href="#").login__new-user New user
