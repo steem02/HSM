@@ -55,7 +55,7 @@
     "eslint": "^5.7.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "exorcist": "^1.0.1",
+    "exorcist": "^2.0.0",
     "imagemin": "^6.1.0",
     "imagemin-cli": "^3.0.0",
     "imagemin-mozjpeg": "^6.0.0",
