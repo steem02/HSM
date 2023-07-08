@@ -75,7 +75,7 @@
     "pug-cli": "^1.0.0-alpha6",
     "rimraf": "^2.6.2",
     "sass": "^1.16.1",
-    "stylelint": "^9.6.0",
+    "stylelint": "^15.10.1",
     "svg-sprite-generator": "0.0.7",
     "svgo": "^1.1.1",
     "uglify-js": "^3.4.9",
